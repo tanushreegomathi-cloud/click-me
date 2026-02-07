@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #4b0000, #8b0000, #b11226);
+  color: #fff;
+  overflow: hidden;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+  color: #ff2e63;
+  animation: glow 1.8s infinite alternate, bounce 2.5s infinite;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff2e63; }
+  to { text-shadow: 0 0 25px #ff2e63; }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 18px 36px;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-btn,
+.yes-btn {
+  background: #c1121f;
+  color: white;
+}
+
+.no-btn {
+  background: #ff4d6d;
+  color: white;
+  position: relative;
+}
+
+.heart {
+  position: fixed;
+  top: -40px;
+  font-size: 4rem;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
